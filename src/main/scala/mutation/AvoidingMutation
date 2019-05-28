@@ -1,0 +1,12 @@
+Avoiding Mutation:
+
+* Mutation of some value x can be replaced with creating a modified copy of x:
+** There are persistent versions of most data structures that can do this efficiently by copying only the parts of the structure that changed and sharing the rest.
+** List, HashSet, HashMap and Vectors are all persistent in Scala
+** A little bit about Vectors (https://alvinalexander.com/scala/vector-class-methods-syntax-examples)
+** Vectors are better for random access, Lists are not.
+
+* Loops can be replaced with recursive functions:
+** On languages with tail call optimization, tail recursion won't blow the stack because the compiler can rewrite it as a loop under the hood.
+** Scala does tail recursion optimisation at compile-time. That is, a tail recursive function is transformed into a loop by the compiler (but not a 100% of the time), as can be seen from the stack trace when running a tail recursive function.
+** In Scala 2.8 you can use @tailrec to mark specific method that you expect the compiler will optimise.If a method can not be optimized you get a compile-time error.

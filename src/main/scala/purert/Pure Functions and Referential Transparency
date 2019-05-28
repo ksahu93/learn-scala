@@ -1,0 +1,10 @@
+* Referential Transparency
+** An expression is referentially transparent (RT) if it can be replaced by its resulting value without changing the behavior of the program. This must be true regardless of where the expression is used in the program.
+** f(x,y)
+** z = f(x,y)
+** In a program z can replace all occurrences of the expressions x+y; without affecting the result of the program
+
+* Pure Function
+** A pure function is referentially transparent and has no side effects
+** The function always evaluates to the same result value given the same argument value(s). It cannot depend on any hidden state or value, and it cannot depend on any I/O.
+** Evaluation of the result does not cause any semantically observable side effect or output, such as mutation of mutable objects or output to I/O devices.

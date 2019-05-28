@@ -1,0 +1,16 @@
+First Class Functions
+
+* In functional programming, functions can be assigned to variables, passed to other functions as parameters, and returned as values from other functions. Such functions are known as First Class Functions.
+** ([<type>, ...]) => <type>
+** For example, the function def double(x: Int): Int = x * 2 has the function type Int => Int, indicating that it has a single Int parameter and returns an Int.
+
+Higher Order Functions
+
+* First class functions pave way for higher order functions. A higher-order function takes other functions as a parameter or returns a function as a result.
+
+* You may have heard of two of the most famous higher-order functions, map() and reduce().
+** The map() higher-order function takes a function parameter and uses it to convert one or more items to a new value and/or type.
+** The reduce() higher-order function takes a function parameter and uses it to reduce a collection of multiple items down to a single item.
+
+The popular Map/Reduce computing paradigm uses this concept to tackle large computing challenges, by mapping the computation across a range of distributed nodes and
+ reducing their results back to a meaningful size.
